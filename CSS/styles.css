@@ -586,41 +586,41 @@ img {
   text-transform: uppercase;
   color: var(--second-txt-cl);
   margin-bottom: 20px;
-
 }
 
 .footer-mailing-btn {
-display: flex;
-gap: 10px;
+  display: flex;
+  gap: 10px;
   font-weight: 700;
-font-size: 16px;
-line-height: calc(30/16);
-align-items: center;
-text-align: center;
-letter-spacing: 0.06em;
-color:var(--second-txt-cl);
-background: var(--accent-txt-cl);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-border: none;
-fill: currentColor;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 28px;
- padding-right: 13px;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--second-txt-cl);
+  background: var(--accent-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  fill: currentColor;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 13px;
 }
 .footer-mailing-form {
   color: var(--second-txt-cl);
   background: var(--accent-bg-cl);
   border: 1px solid rgba(255, 255, 255, 0.3);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
   margin-right: 12px;
   padding-left: 16px;
   width: 358px;
 }
-
-
+.footeer-mailing-contener {
+  display: flex;
+}
 
 /**
     |============================
@@ -745,7 +745,7 @@ border-radius: 4px;
 
 .backdrop {
   position: fixed;
-  
+
   top: 0;
   left: 0;
   width: 100%;
@@ -786,27 +786,47 @@ border-radius: 4px;
   width: 30px;
   height: 30px;
   color: var(--black-txt-cl);
+  background-color: var(--second-txt-cl);
   cursor: pointer;
+  transition: fill var(--animation);
 }
 
-label {
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--bg-activ-btn);
+}
+
+/**
+  |============================
+  | register form
+  |============================
+*/
+.register-form-field {
   display: block;
+  margin-bottom: 10px;
+}
+
+.register-form-group {
+  margin-bottom: 28px;
 }
 
 .register-form-title {
+  display: block;
+  margin-bottom: 30px;
   font-weight: 700;
-font-size: 20px;
-line-height: calc(23/20);
-text-align: center;
-letter-spacing: 0.03em;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: var(--main-txt-cl);
+  color: var(--main-txt-cl);
 }
 .register-form-text {
-font-size: 12px;
-line-height: calc(14/12);
-letter-spacing: 0.01em;
-color: var(--light-txt-cl);
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--light-txt-cl);
+  display: block;
+  margin-bottom: 4px;
 }
 
 .register-form-btn {
@@ -836,14 +856,75 @@ color: var(--light-txt-cl);
 }
 .register-form-mailing {
   font-size: 14px;
-line-height: calc(24/14);
-letter-spacing: 0.03em;
-color: var(--light-txt-cl);
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--light-txt-cl);
 }
 .register-form-contract {
   color: var(--accent-txt-cl);
 }
 
-textarea{
+.register-form-massage {
+  padding: 12px 16px;
   resize: none;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color var(--animation);
+}
+
+.register-form-massage:focus {
+  border-color: var(--accent-txt-cl);
+}
+.register-form-box {
+  position: relative;
+}
+
+.register-form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color var(--animation);
+}
+
+.register-form-input:focus {
+  border-color: var(--accent-txt-cl);
+}
+.register-form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+}
+
+.register-form-input:focus ~ .register-form-icon {
+  fill: var(--accent-txt-cl);
+}
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.icon-checked {
+  opacity: 0;
+  fill: var(--accent-txt-cl);
+  transition: opacity var(--animation);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-checked {
+  opacity: 1;
+}
+.icon-unchecked {
+  transition: opacity var(--animation);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-unchecked {
+  opacity: 0;
 }
