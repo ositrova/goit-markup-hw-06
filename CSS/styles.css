@@ -602,6 +602,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
   fill: currentColor;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -807,12 +808,12 @@ img {
 }
 
 .register-form-group {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .register-form-title {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: calc(23 / 20);
@@ -848,6 +849,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: background-color var(--animation);
+  margin-bottom: 40px;
 }
 
 .register-form-btn:hover,
