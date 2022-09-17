@@ -530,8 +530,11 @@ img {
 }
 .footer-container {
   display: flex;
-
   flex-direction: column;
+}
+
+.footer-container:last-child {
+  margin-left: auto;
 }
 
 /* .footer-socials-container {
@@ -591,6 +594,7 @@ img {
 .footer-mailing-btn {
   display: flex;
   gap: 10px;
+  width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
@@ -830,6 +834,10 @@ img {
   margin-bottom: 4px;
 }
 
+.register-form-field:last-child {
+  margin-bottom: 0;
+}
+
 .register-form-btn {
   font-family: inherit;
   font-weight: 700;
@@ -864,6 +872,7 @@ img {
 }
 .register-form-contract {
   color: var(--accent-txt-cl);
+  text-decoration: underline;
 }
 
 .register-form-massage {
@@ -873,6 +882,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+  display: block;
   transition: border-color var(--animation);
 }
 
@@ -925,6 +935,10 @@ img {
 }
 .icon-unchecked {
   transition: opacity var(--animation);
+}
+
+.register-form-checkbox:focus + .register-form-icons {
+  fill: var(--accent-txt-cl);
 }
 
 .register-form-checkbox:checked + .register-form-icons .icon-unchecked {
