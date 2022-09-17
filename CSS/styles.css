@@ -808,6 +808,7 @@ img {
 */
 .register-form-field {
   display: block;
+  position: relative;
   margin-bottom: 10px;
 }
 
@@ -888,9 +889,6 @@ img {
 
 .register-form-massage:focus {
   border-color: var(--accent-txt-cl);
-}
-.register-form-box {
-  position: relative;
 }
 
 .register-form-input {
